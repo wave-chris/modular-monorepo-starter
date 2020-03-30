@@ -9,7 +9,48 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@domain/user": [
+        "libs/domain/user/src"
+      ],
+      "@domain/user/*": [
+        "libs/domain/user/src/*"
+      ],
+      "@domain/relationship": [
+        "libs/domain/relationship/src"
+      ],
+      "@domain/relationship/*": [
+        "libs/domain/relationship/src/*"
+      ],
+      "@system/firebase-realtime-db-trigger": [
+        "libs/system/firebase-realtime-db-trigger/src"
+      ],
+      "@system/firebase-realtime-db-trigger/*": [
+        "libs/system/firebase-realtime-db-trigger/src/*"
+      ],
+      "@common/util": [
+        "libs/common/util/src"
+      ],
+      "@common/util/*": [
+        "libs/common/util/src/*"
+      ],
+      "@common/internal-exception": [
+        "libs/common/internal-exception/src"
+      ],
+      "@common/internal-exception/*": [
+        "libs/common/internal-exception/src/*"
+      ],
+      "@domain/friendship": [
+        "libs/friendship/src"
+      ],
+      "@domain/friendship/*": [
+        "libs/friendship/src/*"
+      ]
+    }
   },
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

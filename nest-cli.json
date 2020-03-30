@@ -1,4 +1,66 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/modular-monorepo-starter/src",
+  "monorepo": true,
+  "root": "apps/modular-monorepo-starter",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/modular-monorepo-starter/tsconfig.app.json"
+  },
+  "projects": {
+    "user-application": {
+      "type": "application",
+      "root": "apps/user-application",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-application/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-application/tsconfig.app.json"
+      }
+    },
+    "domain/user": {
+      "type": "library",
+      "root": "libs/domain/user",
+      "entryFile": "index",
+      "sourceRoot": "libs/domain/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/domain/user/tsconfig.lib.json"
+      }
+    },
+    "domain/relationship": {
+      "type": "library",
+      "root": "libs/domain/relationship",
+      "entryFile": "index",
+      "sourceRoot": "libs/domain/relationship/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/domain/relationship/tsconfig.lib.json"
+      }
+    },
+    "system/firebase-realtime-db-trigger": {
+      "type": "library",
+      "root": "libs/system/firebase-realtime-db-trigger",
+      "entryFile": "index",
+      "sourceRoot": "libs/system/firebase-realtime-db-trigger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/system/firebase-realtime-db-trigger/tsconfig.lib.json"
+      }
+    },
+    "common/util": {
+      "type": "library",
+      "root": "libs/common/util",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/util/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/util/tsconfig.lib.json"
+      }
+    },
+    "common/internal-exception": {
+      "type": "library",
+      "root": "libs/common/internal-exception",
+      "entryFile": "index",
+      "sourceRoot": "libs/common/internal-exception/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/common/internal-exception/tsconfig.lib.json"
+      }
+    }
+  }
 }
