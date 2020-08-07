@@ -27,7 +27,7 @@
     "@nestjs/platform-express": "^6.10.14",
     "@nestjs/typeorm": "^7.0.0",
     "@typegoose/typegoose": "^6.4.0",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "mongoose": "^5.9.6",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
